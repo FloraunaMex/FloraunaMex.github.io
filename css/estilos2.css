@@ -186,6 +186,9 @@ footer .contacto img {
     order: 3;
     text-align: center;
   }
+.izquierda{
+    order: 1;
+}
 
   .titulo {
     order: 1;
