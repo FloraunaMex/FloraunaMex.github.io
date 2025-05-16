@@ -1,0 +1,510 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+body {
+  margin: 0;
+    font-family: 'Inter', sans-serif, bold;
+  background-color: #ffe0ef;
+  color: #c47a8e;
+}
+
+.menu {
+  background-color: #fde3f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  height: 60px;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #3199a3;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #1e6c74;
+}
+
+main {
+  padding: 20px 40px;
+}
+
+.titulo h1 {
+  color: #a00055;
+    font-size: 20px;
+  font-weight: bold;  
+  margin-bottom: 0;
+}
+
+.titulo p {
+  margin-top: 5px;
+  font-weight: bold;
+  color: #a00055;
+}
+
+.tipo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icono-tipo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.contenido .info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.izquierda, .derecha {
+  width: 25%;
+}
+
+.izquierda h2, .izquierda h3,
+.derecha h3 {
+  color: #319ca3;
+}
+
+.tipo {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.imagen-central {
+  text-align: center;
+  width: 40%;
+  position: relative;
+}
+
+.imagen-central img {
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #a00055;
+  font-weight: bold;
+}
+
+.arrow:first-of-type {
+  left: -30px;
+}
+
+.arrow:last-of-type {
+  right: -30px;
+}
+
+.alerta {
+  color: #a00055;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #ffe0ef;
+  font-family: 'Segoe UI', sans-serif;
+  color: #b66e84;
+  text-align: center;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+/* Íconos con texto */
+footer .contacto {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+footer .contacto div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+footer .contacto img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Imagen decorativa abajo */
+.footer-ola {
+  width: 100%;
+  height: auto;
+}
+
+.footer-ola img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+  .imagen-central {
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+
+  .izquierda,
+  .derecha {
+    width: 100%;
+    order: 3;
+    text-align: center;
+  }
+
+  .titulo {
+    order: 1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .titulo h1 {
+    font-size: 24px;
+  }
+
+  .titulo p {
+    font-size: 16px;
+  }
+
+  /* Opcional: ajustar botones de flecha en el carrete */
+  .arrow {
+    font-size: 20px;
+  }
+
+  .arrow:first-of-type {
+    left: 10px;
+  }
+
+  .arrow:last-of-type {
+    right: 10px;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* alinea todo por arriba */
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Estilo general para las 3 columnas */
+.izquierda,
+.imagen-central,
+.derecha {
+  flex: 1;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Texto alineado a la izquierda */
+.izquierda,
+.derecha {
+  text-align: left;
+  align-items: flex-start;
+}
+
+/* Carrusel centrado en su columna */
+.imagen-central {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo de la imagen */
+.imagen-central img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botones de flechas */
+.arrow {
+  background-color: #e0e0e0;
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.arrow:hover {
+  background-color: #cfcfcf;
+}
+
+/*CSS Principal*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+header,nav,main,footer{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    color: #9D0050;
+    background-color: #FFE3F4;
+}
+header,nav{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+body{
+    background-color: #FFE3F4; 
+}
+main{
+    padding-bottom: 0px;
+}
+footer{
+    padding: 0px;
+}
+#logo{
+    width: 100px;
+    height: auto;
+}
+#logo:hover{
+    filter:grayscale(20%);
+}
+nav{
+    font-size: 26px;
+    color: #4e9ba9;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li{
+    list-style-type: none;
+    min-width: 120px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    padding: 0 10px 0px 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #4e9ba9;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: #9D0050;
+}
+.dropdown-item{
+    text-align: left;
+    color: #9D0050;
+    font-family: "Inter", serif;
+    font-weight: bold;
+}
+#dropdown{
+    margin-top: 15px;
+}
+.dropdown{
+    min-width: 30px;
+}
+.dropdown:hover{
+    color: #9D0050;
+}
+.dropdown-item:hover{
+    color: #4e9ba9;
+    background-color: #FFE3F4;
+}
+.dropdown-menu{
+    background-color: #FFE3F4;
+    width: 10px;
+}
+.nav-item {
+    width: 10%;
+}
+table{
+    width: 60%;
+    border-collapse: collapse;
+    font-family: "Inter", serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #c47a8e;
+}
+.iconos{
+    width: 70px;
+}
+#footerinfo{
+    margin-top: 70px;
+}
+#footerinfo td, #footerinfo th{
+    width: 100px;
+}
+#montañas{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+
+/*Diseño Responsivo para Télefono Celular*/
+@media (max-width: 600px) {
+    
+    header,nav{
+        display: block;
+    }
+    header{
+        padding: 0px;
+        padding-top: 15px;
+    }
+    main{
+        height: auto;
+    }
+    #logo{
+        width: 75px;
+        height: auto;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    nav ul{
+        min-width: 400px;
+    }
+    nav{
+        font-size: 12px;
+        color: #FFE3F4;
+        background-color: #9D0050;
+        margin: 0px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding: 0px;
+    }
+    nav ul li{
+        min-width: 10%;
+        margin-right: auto;
+        margin-left: auto;
+        margin: 0px;
+        padding: 23px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #9D0050;
+    }
+    #dropdown li{
+        padding: 10px;
+    }
+    nav ul li a{
+        width: 90%;
+        color: #FFE3F4;
+        display: flex;
+        justify-content:center;
+    }
+    table{
+        width: 90%;
+        font-size: 12px;
+        border-collapse: collapse;
+    }
+    nav ul li:hover{
+        background-color: #c47a8e;
+        color: #FFE3F4;
+    }
+    nav ul li a:hover{
+        color: #FFE3F4;
+    }
+    .dropdown-item{
+        color: #FFE3F4;
+        font-size: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dropdown-menu{
+        background-color: #c47a8e;
+    }
+    .dropdown-menu li{
+        padding: 10px;
+        background-color: #c47a8e;
+    }
+    #dropdown{
+        margin-top: 8px;
+        display: flex;
+        align-content: center;
+        justify-content:center;
+    }
+    #dropdown:hover{
+        color: #FFE3F4;
+    }
+    .dropdown-item:hover{
+    color: #9D0050;
+    background-color: #c47a8e;
+    } 
+    .nav-item{
+        width: 5%;
+    }
+    h3{
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
+    .iconos{
+        width: 35px;
+    }
+    #footerinfo{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    #montañas{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .izquierda,
+  .imagen-central,
+  .derecha {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,237 @@
+<html>
+<head>
+    <title>Inicio | Florauna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../css/estilo_florauna.css">
+    <style>
+        main{
+            padding: 0px;
+        }
+        section{
+            width: 100%;
+            height: 400px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #FFE3F4;
+            padding: 30px;
+        }
+        #logo_2{
+            width: 10%;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        h1{
+            padding-top: 0px;
+            margin: 0px;
+            font-size: 80px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            color: #9D0050;
+        }
+        h2{
+            font-size: 36px;
+            font-family: "Poppins", sans-serif;
+            font-weight: normal;
+            padding-top: 45px;
+            margin-bottom: 25px;
+        }
+        #bienvenidos, #dato_curioso{
+            background-color: #c47a8e;
+        }
+        #frase, #info{
+            background-color: #9D0050;
+        }
+        #bienvenidos{
+            background-image: url(../imagenes/bienvenidos2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode:soft-light;
+            background-color: #DFA0AC;
+            color: #9D0050;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .frase{
+            font-size: 36px;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            margin-bottom: 0px;
+        }
+        .tseccion, slide{
+            width: 80%;
+            border-collapse: collapse;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .tseccion p{
+            font-family: "Inter";
+            font-weight: normal;
+            font-size: 20px;
+            color: #FFE3F4;
+        }
+        .tseccion th{
+            padding: 20px;
+        }
+        .tseccion img{
+            width: 100%;
+            border: solid 10px #FFE3F4;
+            border-radius: 10px;
+        }
+
+
+        
+        
+        @media (max-width: 600px) {
+            #logo_2{
+                width: 70px;
+                margin-top: 20px;
+            }
+            section{
+                width: 100%;
+                height: 250px;
+                margin-bottom: 0px;
+                padding: 10px;
+            }
+            #bienvenidos{
+                background-color: #4e9ba9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .frase{
+                font-size: 29px;
+                width: 95%;
+                margin-top: 0px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #frase{
+                height: auto;
+                padding-bottom: 25px;
+            }
+            .tseccion{
+                width: 90%;
+            }
+            .tseccion p{
+                font-size: 13px;
+                margin: 0px;
+            }
+            .tseccion tr th{
+                padding: 10px;
+                display: block;
+            }
+            .tseccion img{
+                width: 70%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #info img, #dato_curioso img{
+                margin-bottom: 15px;
+            }
+            #dato_curioso, #info{
+                height: auto;
+            }
+            h1{
+                font-size: 35px;
+                padding-top: 0px;
+                margin: 0px;
+                color: #FFE3F4;
+            }
+            h2{
+                font-size: 28px;
+                padding-top: 20px;
+                margin-bottom: 15px;
+            }
+            main{
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../html/index.html"><img id=logo src="../imagenes/logo.png" alt="Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="../html/ecosistemas.html">Ecosistemas</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href=#></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../html/selva.html">Selva</a></li>
+                      <li><a class="dropdown-item" href="../html/bosque.html">Bosque</a></li>
+                      <li><a class="dropdown-item" href="../html/desierto.html">Desierto</a></li>
+                      <li><a class="dropdown-item" href="../html/arrecife.html">Arrecife</a></li>
+                      <li><a class="dropdown-item" href="../html/manglar.html">Manglar</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/fauna.html">Fauna</a></li>
+                <li><a href="../html/flora.html">Flora</a></li>
+                <li><a href="../html/juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>  
+        <section id=bienvenidos>
+            <h1 class="animate__animated animate__zoomIn animate__slow">BIENVENIDO</h1>
+        </section>
+        <section id=frase>
+            <a href="../html/ecosistemas.html"><img id="logo_2" src="../imagenes/logo3.png" alt="Logo"></a>
+            <p class=frase>¿Estás listo para conocer más acerca de</p>
+            <p class=frase>la flora y fauna de México?</p>
+        </section>
+        <section id=dato_curioso>
+            <h2>Dato Curioso <b>Ajolote</b></h2>
+            <table class=tseccion>
+                <thead>
+                    <tr>
+                        <th><p>El ajolote mexicano destaca por su capacidad de regeneración celular y su complejo sistema respiratorio el cual le permite estar dentro y fuera del agua sin ningún problema.</p></th>
+                        <th><p>Por esta razón algunas culturas antiguas comenzaron a considerarlo como un ser que capaz de poder desafiar la muerte.</p></th>
+                        <th><img src="../imagenes/ajolote.jpg" alt="Ajolote"></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot></tfoot>
+            </table>
+        </section>
+        <section id=info>
+            <h2>Flora <b>Biznaga Burra</b></h2>
+            <table class=tseccion>
+                <thead>
+                    <tr>
+                        <th><p>Echinocactus platyacanthus. Es un cactus globoso tipo barril color verde amarillento, que puede medir de 5 a 3 m de alto y de 40 a 60 cm de diámetro.</p></th>
+                        <th><p>Se ubica en zonas áridas y semiáridas, como en los estados de San Luis Potosí, Durango, Guanajuato, Hidalgo, Nuevo León, Puebla y Querétaro.</p></th>
+                        <th><img src="../imagenes/biznaga.jpg" alt="Biznaga Burra"></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot></tfoot>
+            </table>
+        </section>
+            <table id="footerinfo">
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td><img class="iconos" src="../imagenes/instagram.png" alt="Instagram"></td>
+                        <td><img class="iconos" src="../imagenes/correo.png" alt="Correo"></td>
+                        <td><img class="iconos" src="../imagenes/telefono.png" alt="Telefono"></td>
+                    </tr>
+                    <tr>
+                        <th>Florauna</th>
+                        <th>florauna@gmail.com</th>
+                        <th>222 980 6453</th>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+    </main>
+    <footer>
+        <img id="montañas" src="../imagenes/montanas.png" alt="Foto Montañas">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

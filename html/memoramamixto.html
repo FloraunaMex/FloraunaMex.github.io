@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memorama | Florauna</title>
+
+  <!-- Bootstrap + Animate.css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="../css/estilos.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: inter, sans-serif;
+      background-color: #FFE3F4;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 28px;
+        font-family: poppins, sans-serif; 
+      color: #a5064f;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .subtitle {
+      color: #a5064f;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #a5064f;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+      justify-content: center;
+      margin: 0 auto 30px;
+      max-width: 600px;
+    }
+
+    .card {
+      width: 100%;
+      aspect-ratio: 5 / 7;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .card.flipped .card-inner {
+      transform: rotateY(180deg) scale(1.05);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-front {
+      background-color: #a5064f;
+    }
+
+    .card-back {
+      background-color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    .card img {
+      width: 80%;
+      height: auto;
+    }
+
+    .message {
+      font-size: 18px;
+      color: #a5064f;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .message.success {
+      background-color: #fff0f6;
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(165, 6, 79, 0.3);
+      display: inline-block;
+    }
+
+    button.restart {
+      background-color: #a5064f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button.restart:hover {
+      background-color: #87043d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header del sitio -->
+  <header class="mb-4">
+    <a href="../html/index.html"><img id="logo" src="../imagenes/logo.png" alt="Logo Florauna" /></a>
+    <nav>
+            <ul>
+                <li><a href="../html/ecosistemas.html">Ecosistemas</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href=#></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../html/selva.html">Selva</a></li>
+                      <li><a class="dropdown-item" href="../html/bosque.html">Bosque</a></li>
+                      <li><a class="dropdown-item" href="../html/desierto.html">Desierto</a></li>
+                      <li><a class="dropdown-item" href="../html/arrecife.html">Arrecife</a></li>
+                      <li><a class="dropdown-item" href="../html/manglar.html">Manglar</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/fauna.html">Fauna</a></li>
+                <li><a href="../html/flora.html">Flora</a></li>
+                <li><a href="../html/juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+  </header>
+
+  <main>
+    <div class="title">MEMORAMA</div>
+    <div class="subtitle">Flora y Fauna Endémica</div>
+    <div class="stats">Intentos: <span id="attempts">0</span></div>
+
+    <div class="grid" id="gameBoard"></div>
+
+    <div class="message" id="completionMessage"></div>
+
+    <button class="restart mt-3" onclick="location.reload()">Reiniciar</button>
+
+    <!-- Footer info -->
+    <table id="footerinfo" >
+      <tbody>
+        <tr>
+          <td><img class="iconos" src="../imagenes/instagram.png" alt="Instagram"></td>
+          <td><img class="iconos" src="../imagenes/correo.png" alt="Correo"></td>
+          <td><img class="iconos" src="../imagenes/telefono.png" alt="Teléfono"></td>
+        </tr>
+        <tr>
+          <th>Florauna</th>
+          <th>florauna@gmail.com</th>
+          <th>222 980 6453</th>
+        </tr>
+      </tbody>
+    </table>
+  
+
+  
+
+  <script>
+    const imageNames = [
+    "../imagenes/orquidea.png", "../imagenes/dalia.png", "../imagenes/mayo.png", "../imagenes/jacaranda.png", "../imagenes/cempasuchil.png", "../imagenes/monarca.png", "../imagenes/ajolote.png", "../imagenes/rana.png", "../imagenes/vaquita.png", "../imagenes/colibri.png",
+    ];
+    const images = [...imageNames, ...imageNames].sort(() => 0.5 - Math.random());
+    const board = document.getElementById("gameBoard");
+    const attemptsDisplay = document.getElementById("attempts");
+    const messageDisplay = document.getElementById("completionMessage");
+
+    let firstCard = null;
+    let secondCard = null;
+    let lockBoard = false;
+    let attempts = 0;
+    let matchedPairs = 0;
+    const totalPairs = imageNames.length;
+
+    function createCard(imgSrc) {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.dataset.image = imgSrc;
+
+      const inner = document.createElement("div");
+      inner.className = "card-inner";
+
+      const front = document.createElement("div");
+      front.className = "card-front";
+      const frontImg = document.createElement("img");
+      frontImg.src = "../imagenes/reverso.png";
+      frontImg.alt = "Tarjeta oculta";
+      front.appendChild(frontImg);
+
+      const back = document.createElement("div");
+      back.className = "card-back";
+      const backImg = document.createElement("img");
+      backImg.src = imgSrc;
+      backImg.alt = `Imagen de ${imgSrc.split('.')[0]}`;
+      backImg.onerror = () => {
+        backImg.src = "../imagenes/reverso.png";
+      };
+      back.appendChild(backImg);
+
+      inner.appendChild(front);
+      inner.appendChild(back);
+      card.appendChild(inner);
+
+      card.addEventListener("click", () => {
+        if (lockBoard || card.classList.contains("flipped")) return;
+
+        card.classList.add("flipped", "animate__animated", "animate__flipInY");
+
+        if (!firstCard) {
+          firstCard = card;
+        } else {
+          secondCard = card;
+          lockBoard = true;
+          attempts++;
+          attemptsDisplay.textContent = attempts;
+
+          if (firstCard.dataset.image === secondCard.dataset.image) {
+            setTimeout(() => {
+              firstCard.classList.add("animate__animated", "animate__pulse");
+              secondCard.classList.add("animate__animated", "animate__pulse");
+            }, 300);
+
+            matchedPairs++;
+            if (matchedPairs === totalPairs) {
+              messageDisplay.textContent = "¡Felicidades! Has encontrado todos los pares.";
+              messageDisplay.classList.add("animate__animated", "animate__bounceIn", "success");
+            }
+            resetTurn();
+          } else {
+            setTimeout(() => {
+              firstCard.classList.remove("flipped", "animate__flipInY");
+              secondCard.classList.remove("flipped", "animate__flipInY");
+              resetTurn();
+            }, 1000);
+          }
+        }
+      });
+
+      return card;
+    }
+
+    function resetTurn() {
+      [firstCard, secondCard] = [null, null];
+      lockBoard = false;
+    }
+
+    images.forEach(img => board.appendChild(createCard(img)));
+  </script>
+</main>
+<footer>
+    <img id="montañas" src="../imagenes/montanas.png" alt="Montañas">
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

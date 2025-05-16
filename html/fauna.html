@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<html lang="es">
+<head>
+    <title>Inicio | Florauna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../css/estilos2.css">
+    <style>        
+        @media (max-width: 600px) {
+            /* Aquí puedes agregar reglas para móviles */
+        }
+    </style>
+</head>
+<body>
+  <header>
+        <a href="../html/index.html"><img id=logo src="../imagenes/logo.png" alt="Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="../html/ecosistemas.html">Ecosistemas</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href=#></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../html/selva.html">Selva</a></li>
+                      <li><a class="dropdown-item" href="../html/bosque.html">Bosque</a></li>
+                      <li><a class="dropdown-item" href="../html/desierto.html">Desierto</a></li>
+                      <li><a class="dropdown-item" href="../html/arrecife.html">Arrecife</a></li>
+                      <li><a class="dropdown-item" href="../html/manglar.html">Manglar</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/fauna.html">Fauna</a></li>
+                <li><a href="../html/flora.html">Flora</a></li>
+                <li><a href="../html/juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+  <main>
+  <section class="contenido">
+    <div class="titulo">
+      <h1 id="nombre-comun">Nombre Común</h1>
+      <p>Flora Endémica</p>
+    </div>
+
+    <div class="info">
+      <div class="izquierda">
+        <h2>Nombre Científico</h2>
+        <p id="nombre-cientifico"><em>Nombre científico</em></p>
+        <p class="tipo">
+  <strong>Tipo:</strong>
+  <img src="../imagenes/animales.png" alt="Icono tipo" class="icono-tipo">
+  <span id="tipo">Tipo</span>
+</p>
+        <h3>Ubicación</h3>
+        <ul id="ubicacion">
+          <li>Ubicación</li>
+        </ul>
+      </div>
+
+        <div class="imagen-central text-center mx-auto">
+            <button class="arrow" onclick="cambiarPlanta(-1)">&lt;</button>
+            <img id="imagen-planta" src="planta1.png" alt="Imagen planta" style="max-width: 200px;">
+            <button class="arrow" onclick="cambiarPlanta(1)">&gt;</button>
+        </div>
+
+        <div class="derecha">
+            <h3>Descripción</h3>
+            <p id="descripcion">Descripción aquí.</p>
+            <h3>Dato Curioso</h3>
+            <p id="dato">Dato curioso aquí.</p>
+            <p class="alerta" id="alerta">Texto de advertencia aquí.</p>
+        </div>
+    </div>
+  </section>
+      
+      <table id="footerinfo">
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td><img class="iconos" src="../imagenes/instagram.png" alt="Instagram"></td>
+                    <td><img class="iconos" src="../imagenes/correo.png" alt="Correo"></td>
+                    <td><img class="iconos" src="../imagenes/telefono.png" alt="Telefono"></td>
+                </tr>
+                <tr>
+                    <th>Florauna</th>
+                    <th>florauna@gmail.com</th>
+                    <th>222 980 6453</th>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+</main>
+</main>
+
+
+    <footer>
+        <img id="montañas" src="../imagenes/montanas.png" alt="Foto Montañas">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <script>
+  const plantas = [
+    {
+      nombreComun: "Vaquita Marina",
+      nombreCientifico: "Phocoena sinus",
+      tipo: "Acuatico",
+      ubicacion: ["En el alto Golfo de México"],
+      imagen: "../imagenes/vaquitasin.png",
+      descripcion: "Mide alrededor de 1.5 metros y pesa hasta 50 kg. Su cuerpo es robusto, de color gris con áreas más claras en el vientre y manchas oscuras alrededor de los ojos y la boca",
+      dato: "Considerada la marsopa más pequeña del mundo.",
+      alerta: "La vaquita marina no es cazada directamente, pero muere por actividades humanas no controladas."
+    },
+    {
+      nombreComun: "Ajolote Mexicano",
+      nombreCientifico: "Ambystoma mexicanum",
+      tipo: "Terrestre",
+      ubicacion: ["Lago de Chalco", "Lago de Xochimilco"],
+      imagen: "../imagenes/ajolotesin.png",
+      descripcion: " El ajolote es una especie de salamandra neoténica que conserva sus características larvales a lo largo de su vida adulta, como las branquias externas.",
+      dato: " Su capacidad de regeneración ha sido objeto de estudio científico durante décadas.",
+      alerta: "En peligro crítico de extinción debido a la pérdida de hábitat, contaminación y especies invasoras"
+    },
+    {
+      nombreComun: "Colibrí cola hendida",
+      nombreCientifico: "Doricha eliza",
+      tipo: "Terrestre",
+      ubicacion: ["Ubicada en el centro de Veracruz",  "zona costera norte de la península de Yucatán en Campeche",   "Quintana Roo"],
+      imagen: "../imagenes/colibrisin.png",
+      descripcion: "Tiene un tamaño pequeño (alrededor de 10 cm), y el macho es muy llamativo: su cola es larga, ahorquillada (en forma de “V”) y parece una tijera, mientras que sus plumas brillan en tonos verdes y rosados.",
+      dato: "Es un polinizador vital en los ecosistemas donde vive, ayudando a mantener el equilibrio natural.",
+      alerta: "La fragmentación del hábitat hace que cada vez tenga menos lugares seguros para alimentarse, anidar y reproducirse."
+    },
+    {
+      nombreComun: "Teporingo",
+      nombreCientifico: "Romerolagus diazi",
+      tipo: "Ornamental",
+      ubicacion: ["Popocatépetl", "Iztaccíhuatl", "Pelado", "Tláloc"],
+      imagen: "../imagenes/teporingo.png",
+      descripcion: "Orejas cortas, cuerpo compacto y pelaje denso de color café oscuro. Es muy discreto y difícil de observar.",
+      dato: "El teporingo es tan escurridizo que durante mucho tiempo se creyó que era un animal mítico o extinto",
+      alerta: "La deforestación, incendios forestales, agricultura y expansión urbana están reduciendo los pastizales de zacatón y bosques donde vive."
+    },
+    {
+      nombreComun: "Mariposa Monarca",
+      nombreCientifico: "Danaus plexippus",
+      tipo: "Terrestre",
+      ubicacion: ["Morelos", "Puebla", "Estado de México"],
+      imagen: "../imagenes/monarcasinfondo.png",
+      descripcion: "color naranja intenso con venas negras y manchas blancas.",
+      dato: "Aunque no es endémica, su migración a bosques mexicanos es única.",
+      alerta: "Su comercialización no regulada afecta su valor cultural."
+    },
+    {
+      nombreComun: "Rana de árbol de los Tuxtlas",
+      nombreCientifico: "Exerodonta sumichrasti",
+      tipo: "Terrestre",
+      ubicacion: ["Veracruz"],
+      imagen: "../imagenes/ranasin.png",
+      descripcion: "Tiene cuerpo delgado, piel lisa y colores que varían entre verde, marrón o grisáceo para camuflarse. Posee ojos grandes y dedos largos con discos adhesivos que le permiten trepar",
+      dato: "Es una especie difícil de observar, ya que es nocturna, tímida y de hábitos muy reservados, lo que ha dificultado su estudio",
+      alerta: "Si su población disminuye, suele ser una señal de desequilibrio ambiental en su entorno."
+    }
+  ];
+
+  let indiceActual = 0;
+
+  function cambiarPlanta(direccion) {
+    indiceActual = (indiceActual + direccion + plantas.length) % plantas.length;
+    const planta = plantas[indiceActual];
+
+    document.getElementById("nombre-comun").textContent = planta.nombreComun;
+    document.getElementById("nombre-cientifico").textContent = planta.nombreCientifico;
+    document.getElementById("tipo").textContent = planta.tipo;
+    document.getElementById("imagen-planta").src = planta.imagen;
+    document.getElementById("descripcion").textContent = planta.descripcion;
+    document.getElementById("dato").textContent = planta.dato;
+    document.getElementById("alerta").textContent = planta.alerta;
+
+    const ubicacionLista = document.getElementById("ubicacion");
+    ubicacionLista.innerHTML = "";
+    planta.ubicacion.forEach(ubi => {
+      const li = document.createElement("li");
+      li.textContent = ubi;
+      ubicacionLista.appendChild(li);
+    });
+  }
+
+  // Cargar planta inicial al cargar la página
+  window.onload = () => cambiarPlanta(0);
+</script>
+</body>
+</html>

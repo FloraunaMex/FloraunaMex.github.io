@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Selva | Florauna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../css/estilo_florauna.css">
+    <style>
+        main{
+            padding-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../html/index.html"><img id=logo src="../imagenes/logo.png" alt="Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="../html/ecosistemas.html">Ecosistemas</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href=#></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../html/selva.html">Selva</a></li>
+                      <li><a class="dropdown-item" href="../html/bosque.html">Bosque</a></li>
+                      <li><a class="dropdown-item" href="../html/desierto.html">Desierto</a></li>
+                      <li><a class="dropdown-item" href="../html/arrecife.html">Arrecife</a></li>
+                      <li><a class="dropdown-item" href="../html/manglar.html">Manglar</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/fauna.html">Fauna</a></li>
+                <li><a href="../html/flora.html">Flora</a></li>
+                <li><a href="../html/juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="h1tipo" style="padding-top: 0px;">Selva</h1>
+        <h3>ECOSISTEMA DE MÉXICO</h3>
+        <img class="animate__animated animate__zoomIn animate__delay-3s animate__slow" id="ecoicono" src="../imagenes/selva.png" alt="Selva Ícono">
+        <img class="animate__animated animate__fadeInLeft animate__slower" id=collage src="../imagenes/selva%20lap.png" alt="Collage Ecosistema Selva">
+           
+            <table id="infoecosistema">
+                    <thead>
+                        <tr>
+                          <th>
+                              <h2>Ubicación</h2>
+                              <p>Se encuentran estados con climas tropicales como Baja California, Campeche, Quintana Roo, Tabasco, Yucatán, entre otros.</p><br>
+                              <h2>Descripción</h2>
+                              <p>Conocido también como jungla, son ecosistemas ubicados en ambientes húmedos y cálidos, aunque algunas otras con temperaturas más frescas y suaves.</p>
+                          </th>
+                          <th>
+                              <h2>Flora y Fauna</h2>
+                              <p>Principalmente alberga una extensa cantidad de especies en flora y fauna, además de caracterizarse por albergar árboles de grandes dimensiones y altura.<br><br>La flora incluye árboles de gran altura, lianas, epífitas y plantas herbáceas. La fauna abarca mamíferos como monos, jaguares y perezosos, aves exóticas, reptiles como serpientes y anfibios, y una gran cantidad de insectos.</p>
+                          </th>
+                          <th>
+                              <h2>Problemática</h2>
+                              <p>Las selvas de México enfrentan numerosas problemáticas, incluyendo la deforestación, la tala ilegal, la expansión de la frontera agrícola y ganadera, la construcción de infraestructura, y el cambio climático.
+                              <br><br>Estas acciones contribuyen a la pérdida de biodiversidad, la contaminación de los recursos hídricos, y el desplazamiento de comunidades.</p><br><br>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+                </table>    
+            <table id="footerinfo">
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td><img class="iconos" src="../imagenes/instagram.png" alt="Instagram"></td>
+                        <td><img class="iconos" src="../imagenes/correo.png" alt="Correo"></td>
+                        <td><img class="iconos" src="../imagenes/telefono.png" alt="Telefono"></td>
+                    </tr>
+                    <tr>
+                        <th>Florauna</th>
+                        <th>florauna@gmail.com</th>
+                        <th>222 980 6453</th>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+    </main>
+    <footer>
+        <img id="montañas" src="../imagenes/montanas.png" alt="Foto Montañas">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        popoverTriggerList.forEach(function (popoverTriggerEl) {
+          new bootstrap.Popover(popoverTriggerEl);
+        });
+      });
+    </script>
+</body>
+</html>

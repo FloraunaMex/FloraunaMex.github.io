@@ -1,0 +1,227 @@
+<html>
+<head>
+    <title>Juegos | Florauna</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../css/estilo_florauna.css">
+    <style>
+        main{
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        .col{
+            margin-top: 60px;
+            width: 45%;
+            padding: 20px;
+            padding-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card{
+            background-color: #9D0050;
+            border-color:#FFE3F4;
+            border-radius: 20px;
+        }
+        .card-body{
+            background-color: #c47a8e;
+            padding: 50px;
+            border-radius: 20px;
+        }
+        #card2{
+            background-color: #c47a8e;
+        }
+        #card2 .card-body{
+            background-color: #9D0050;
+        }
+        .card-title{
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 38px;
+            color: #FFE3F4;
+        }
+        .card-img-top{
+            padding: 20px;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .card-text {
+            font-family: "Inter", serif;
+            font-weight: normal;
+            font-size: 18px;
+            color: #FFE3F4;
+        }
+        .btn.btn-primary {
+            background-color: #4e9ba9;
+            border-color: #4e9ba9;
+            color: #FFE3F4;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+          }
+        .btn.btn-primary:hover {
+            background-color: #FFE3F4;
+            border-color: #FFE3F4;
+            color: #9D0050;
+          }
+        #memorama, #quiz{
+            list-style-type: none;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #FFE3F4;
+            padding: 0px;
+            margin-bottom: 25px;
+        }
+        #memorama li, #quiz li{
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            padding-left: 25px;
+            padding-right: 25px;
+            margin: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background-color: #9D0050;
+        }
+        #quiz li{
+            background-color: #c47a8e;
+        }
+        #memorama a, #quiz a{
+           text-decoration: none;
+            color: #FFE3F4;
+        }
+        #quiz li:hover, #memorama li:hover{
+            background-color: #FFE3F4;
+            color: #9D0050;
+        }
+        #memorama li a:hover, #quiz li a:hover{
+            background-color: #FFE3F4;
+            color: #9D0050;
+        }
+        
+        
+        
+        /*Diseño Responsivo para Télefono Celular*/
+        @media (max-width: 600px) {
+            main{
+                padding: 0px;
+            }
+            #h1juegos, .h1tipo{
+                color: #9D0050;
+            }
+            h3{
+                margin-bottom: 40px;
+                margin-top: 5px;
+            }
+            .row {
+                display: block;
+            }
+            .col{
+                width: 85%;
+                margin-top: 30px;
+            }
+            .card-text{
+                font-size: 13px;
+            }
+            .card-title{
+                font-size: 28px;
+            }
+            .card-body{
+                padding: 30px;
+            }
+            .btn.btn-primary, #memorama, #quiz{
+                font-size: 14px;
+            }
+            #memorama li, #quiz li{
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../html/index.html"><img id=logo src="../imagenes/logo.png" alt="Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="../html/ecosistemas.html">Ecosistemas</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href=#></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../html/selva.html">Selva</a></li>
+                      <li><a class="dropdown-item" href="../html/bosque.html">Bosque</a></li>
+                      <li><a class="dropdown-item" href="../html/desierto.html">Desierto</a></li>
+                      <li><a class="dropdown-item" href="../html/arrecife.html">Arrecife</a></li>
+                      <li><a class="dropdown-item" href="../html/manglar.html">Manglar</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/fauna.html">Fauna</a></li>
+                <li><a href="../html/flora.html">Flora</a></li>
+                <li><a href="../html/juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="padding-top: 0px;">  
+       <h1 class="h1tipo" id="h1juegos" style="padding-top: 0px;">Juegos</h1>
+        <h3>FLORA Y FAUNA ENDÉMICA</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                  <img src="../imagenes/logo3.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title">Memorama</h2>
+                    <p class="card-text">¿Recordarás cada uno de los pares de especies endémicas en México? ¡A jugar!</p>
+                    <ul class="animate__animated animate__zoomIn animate__slower" id=memorama>
+                        <a href="../html/memoramaflora.html"><li>Flora</li></a>
+                        <a href="../html/memoramafauna.html"><li>Fauna</li></a>
+                        <a href="../html/memoramamixto.html"><li>Mixto</li></a>
+                    </ul>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                    <a style="text-decoration:none;" href="../html/memoramamixto.html" class="d-grid gap-2 col-6 mx-auto">
+                       <button class="btn btn-primary" type="button">JUGAR</button>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="col">
+                <div id="card2" class="card">
+                  <img src="../imagenes/logo4.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h2 class="card-title">Quiz</h2>
+                    <p class="card-text">¡Descubre cuanto aprendiste acerca de la flora y fauna endémica de México!</p>
+                    <ul class="animate__animated animate__zoomIn animate__slower" id="quiz">
+                        <a href="../html/quiz.html"><li>Flora</li></a>
+                        <a href="../html/quiz.html"><li>Fauna</li></a>
+                        <a href="../html/quiz.html"><li>Mixto</li></a>
+                    </ul>
+                    <a style="text-decoration:none;" href="#" class="d-grid gap-2 col-6 mx-auto">
+                      <button class="btn btn-primary" type="button">JUGAR</button>
+                    </a>
+                  </div>
+                </div>
+            </div> 
+        </div>
+            <table id="footerinfo">
+                    <thead></thead>
+                    <tbody>
+                        <tr>
+                            <td class="insta"><img class="iconos" src="../imagenes/instagram.png" alt="Instagram"></td>
+                            <td><img class="iconos" src="../imagenes/correo.png" alt="Correo"></td>
+                            <td><img class="iconos" src="../imagenes/telefono.png" alt="Telefono"></td>
+                        </tr>
+                        <tr>
+                            <th>Florauna</th>
+                            <th>florauna@gmail.com</th>
+                            <th>222 980 6453</th>
+                        </tr>
+                    </tbody>
+                    <tfoot></tfoot>
+            </table>
+    </main>
+    <footer>
+        <img id="montañas" src="../imagenes/montanas.png" alt="Foto Montañas">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
