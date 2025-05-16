@@ -9,37 +9,6 @@ body {
   color: #c47a8e;
 }
 
-.menu {
-  background-color: #fde3f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  padding: 20px 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.logo {
-  height: 60px;
-}
-
-.nav {
-  display: flex;
-  gap: 40px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #3199a3;
-  font-weight: bold;
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: #1e6c74;
-}
-
 main {
   padding: 20px 40px;
 }
@@ -352,6 +321,17 @@ nav ul li a:hover {
 }
 .nav-item {
     width: 10%;
+}
+.h1tipo{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 38px;
+}
+h3{
+   font-family: "Inter";
+    font-weight: normal;
+    font-size: 18px;
+    color: #A76879;
 }
 .h1tipo{
     font-family: "Poppins";
