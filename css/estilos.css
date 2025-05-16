@@ -361,6 +361,17 @@ nav ul li a:hover {
 .nav-item {
     width: 10%;
 }
+.h1tipo{
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 38px;
+}
+h3{
+   font-family: "Inter";
+    font-weight: normal;
+    font-size: 18px;
+    color: #A76879;
+}
 table{
     width: 60%;
     border-collapse: collapse;
